@@ -1,6 +1,6 @@
 timestamps {
 
-  node ('master') 
+  node () 
   stages {
 
 	stage ('Docker_build - Checkout') {
