@@ -1,5 +1,9 @@
 pipeline {
-    node () 
+  agent { 
+    node {
+      label 'master'
+    }
+  }
     stages {
         stage('Docker_build - Checkout') {
             steps {
