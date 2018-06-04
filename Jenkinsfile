@@ -14,10 +14,10 @@ pipeline {
     stage('Test-docker - Build') {
       steps {
         build 'docker-build-job'
-        dockerNode(image: 'npm-test-demo-image:v${BUILD_NUMBER}', socket: true) {
+        docker build("npm-test-demo-image:v${BUILD_NUMBER}") {
           echo 'Build created'
         }
-        
+
       }
     }
     stage('status') {
