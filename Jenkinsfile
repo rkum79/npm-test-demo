@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Docker_build - Build') {
             steps {
-                container = docker.build('-f \$WORKSPACE/Dockerfile npm-test-demo-image:v\$BUILD_NUMBER')
+                container = docker.build("npm-test-demo-image:v${BUILD_NUMBER}")
             }
         }
     }
