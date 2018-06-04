@@ -2,8 +2,7 @@ pipeline {
   agent {
     node {
       label 'master'
-    }
-    
+    } 
   }
   stages {
     stage('Test-docker - Checkout') {
@@ -13,7 +12,6 @@ pipeline {
     }
     stage('Test-docker - Build') {
       steps {
-        build 'docker-build-job'
         docker build("npm-test-demo-image:v${BUILD_NUMBER}") {
           echo 'Build created'
         }
