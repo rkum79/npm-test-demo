@@ -1,6 +1,11 @@
-timestamps {
+pipeline { 
+ 
+  agent { 
+    node {
+      label 'master'
+    }
+  }
 
-  node () 
   stages {
 
 	stage ('Docker_build - Checkout') {
