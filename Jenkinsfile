@@ -9,7 +9,7 @@ pipeline {
         stage('Docker_build - Build') {
             steps {
                 dir('${WORKSPACE}') {
-                   docker.image("npm-test-demo-image:v${BUILD_NUMBER}")
+                   docker.build("npm-test-demo-image:v${BUILD_NUMBER}")
                 }
             }
         }
