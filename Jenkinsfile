@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Test-docker - Checkout') {
       steps {
-        git(url: 'https://github.com/rkum79/npm-test-demo', branch: 'master', changelog: true, credentialsId: 'b7fa7a585f975c4caa1dde7ae4570a5b44b452ab', poll: true)
+        git(url: 'https://github.com/rkum79/npm-test-demo.git', branch: 'master', changelog: true, credentialsId: '587adf48-114e-49cc-8e19-52bce59625a3', poll: true)
       }
     }
     stage('Test-docker - Build') {
