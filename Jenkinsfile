@@ -1,6 +1,6 @@
 pipeline {
 
-  agent master
+  agent any
   stages {
 
 	stage ('Docker_build - Checkout') {
