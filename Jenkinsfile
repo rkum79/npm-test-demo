@@ -10,7 +10,7 @@ pipeline {
         stage('Docker_build - Build') {
             agent { 'master' } 
             steps {
-                container = docker.build("npm-test-demo-image:v$\BUILD_NUMBER", "-f $\WORKSPACE/Dockerfile .")
+                container = docker.build('-f \$WORKSPACE/Dockerfile npm-test-demo-image:v\$BUILD_NUMBER')
             }
         }
     }
